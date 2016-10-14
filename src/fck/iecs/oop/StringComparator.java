@@ -5,23 +5,29 @@ import  java. util.*;
 public class StringComparator {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter a string 1: ");
-		String a = input.next();
-		System.out.println("Enter a string 2: ");
-		String b = input.next();
+		int compare =0;
 		
-		a.toLowerCase();
-		b.toLowerCase();
+		do{
+			Scanner input = new Scanner(System.in);
+			System.out.println("Enter a string 1: ");
+			String a = input.next();
+			System.out.println("Enter a string 2: ");
+			String b = input.next();
 		
-		int flag = a.compareTo(b);
+			a.toLowerCase();
+			b.toLowerCase();
 		
-        if(a.equalsIgnoreCase(b)) {
-        	System.out.println("The two strings are the same.");
-        }
-        else{
-        	System.out.println("The two strings are not the same.");
-        }
+			int flag = a.compareTo(b);
+		
+			if(a.equalsIgnoreCase(b)) {
+				System.out.println("The two strings are the same.");
+				compare = 0;
+			}
+			else{
+				System.out.println("The two strings are not the same.");
+				compare = 1;
+			}
+		}while(compare == 1);
 
 	}
 
